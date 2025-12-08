@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package unit6assignment;
+package AhnBasitUnit6Assignment;
 
 /**
  *
  * @author mubas
  */
 public class StudyPoints extends javax.swing.JFrame {
-    Unit6Assignment mainWindow;
+    Menu mainWindow;
     /**
      * Creates new form StudyPoints
      */
-    public StudyPoints(Unit6Assignment m) {
+    public StudyPoints(Menu m) {
         initComponents();
         mainWindow = m;
     }
@@ -30,6 +30,7 @@ public class StudyPoints extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -37,23 +38,7 @@ public class StudyPoints extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(322, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
-                .addComponent(btnBack)
-                .addContainerGap())
-        );
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

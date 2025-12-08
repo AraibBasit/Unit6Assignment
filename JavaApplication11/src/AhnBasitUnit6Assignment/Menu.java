@@ -2,21 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package unit6assignment;
+package AhnBasitUnit6Assignment;
+
+import java.awt.Color;
 
 /**
  *
  * @author mubas
  */
-public class Unit6Assignment extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame {
 
     private StudyPoints studyWindow;
-    
+
     /**
      * Creates new form Unit6Assignment
      */
-    public Unit6Assignment() {
+    public Menu() {
         initComponents();
+        getContentPane().setBackground(Color.CYAN);
     }
 
     /**
@@ -30,10 +33,18 @@ public class Unit6Assignment extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         btnStudyPoints = new javax.swing.JButton();
+        btnMCQuiz = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(java.awt.Color.white);
+        setPreferredSize(new java.awt.Dimension(575, 435));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("SDLC");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 18)); // NOI18N
+        jLabel1.setText("Software Development Life Cycle Studying Program");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, -1, -1));
 
         btnStudyPoints.setText("Study Points");
         btnStudyPoints.addActionListener(new java.awt.event.ActionListener() {
@@ -41,43 +52,35 @@ public class Unit6Assignment extends javax.swing.JFrame {
                 btnStudyPointsActionPerformed(evt);
             }
         });
+        getContentPane().add(btnStudyPoints, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 240, 70));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(btnStudyPoints)))
-                .addContainerGap(216, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(115, 115, 115)
-                .addComponent(btnStudyPoints)
-                .addContainerGap(122, Short.MAX_VALUE))
-        );
+        btnMCQuiz.setText("MC Quiz");
+        btnMCQuiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMCQuizActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnMCQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 240, 70));
+
+        btnExit.setText("Exit");
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 240, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnStudyPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudyPointsActionPerformed
-        if(studyWindow == null){
-        studyWindow = new StudyPoints(this);
-       
+        if (studyWindow == null) {
+            studyWindow = new StudyPoints(this);
+
         }
-        
+
         studyWindow.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnStudyPointsActionPerformed
+
+    private void btnMCQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMCQuizActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMCQuizActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,25 +99,28 @@ public class Unit6Assignment extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Unit6Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Unit6Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Unit6Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Unit6Assignment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Unit6Assignment().setVisible(true);
+                new Menu().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnMCQuiz;
     private javax.swing.JButton btnStudyPoints;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
