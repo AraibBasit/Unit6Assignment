@@ -4,18 +4,40 @@
  */
 package AhnBasitUnit6Assignment;
 
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author mubas
  */
 public class StudyPoints extends javax.swing.JFrame {
+
     Menu mainWindow;
+
     /**
      * Creates new form StudyPoints
      */
     public StudyPoints(Menu m) {
         initComponents();
         mainWindow = m;
+        try {
+            File f = new File("src/AhnBasitUnit6Assignment/studyNote.txt");
+            Scanner s = new Scanner(f);
+            TxtArea1.setText(s.nextLine() + "\n" + s.nextLine());
+            TxtArea2.setText(s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine());
+            TxtArea3.setText(s.nextLine() + "\n" + s.nextLine());
+            TxtArea4.setText(s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine());
+            TxtArea5.setText(s.nextLine());
+            TxtArea6.setText(s.nextLine() + "\n" + s.nextLine());
+            TxtArea7.setText(s.nextLine());
+            TxtArea8.setText(s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine());
+            TxtArea9.setText(s.nextLine() + "\n" + s.nextLine() + "\n" + s.nextLine());
+            TxtArea10.setText(s.nextLine());
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: " + e);
+        }
     }
 
     /**
@@ -28,6 +50,26 @@ public class StudyPoints extends javax.swing.JFrame {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TxtArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TxtArea2 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        TxtArea3 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        TxtArea4 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        TxtArea6 = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        TxtArea7 = new javax.swing.JTextArea();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        TxtArea8 = new javax.swing.JTextArea();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        TxtArea9 = new javax.swing.JTextArea();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        TxtArea5 = new javax.swing.JTextArea();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        TxtArea10 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -38,7 +80,67 @@ public class StudyPoints extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, -1, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 510, -1, -1));
+
+        TxtArea1.setColumns(20);
+        TxtArea1.setRows(5);
+        jScrollPane1.setViewportView(TxtArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, -1));
+
+        TxtArea2.setColumns(20);
+        TxtArea2.setRows(5);
+        jScrollPane2.setViewportView(TxtArea2);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, -1));
+
+        TxtArea3.setColumns(20);
+        TxtArea3.setRows(5);
+        jScrollPane3.setViewportView(TxtArea3);
+
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 360, -1));
+
+        TxtArea4.setColumns(20);
+        TxtArea4.setRows(5);
+        jScrollPane4.setViewportView(TxtArea4);
+
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 360, -1));
+
+        TxtArea6.setColumns(20);
+        TxtArea6.setRows(5);
+        jScrollPane5.setViewportView(TxtArea6);
+
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 340, -1));
+
+        TxtArea7.setColumns(20);
+        TxtArea7.setRows(5);
+        jScrollPane6.setViewportView(TxtArea7);
+
+        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 340, -1));
+
+        TxtArea8.setColumns(20);
+        TxtArea8.setRows(5);
+        jScrollPane7.setViewportView(TxtArea8);
+
+        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 340, -1));
+
+        TxtArea9.setColumns(20);
+        TxtArea9.setRows(5);
+        jScrollPane8.setViewportView(TxtArea9);
+
+        getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 340, -1));
+
+        TxtArea5.setColumns(20);
+        TxtArea5.setRows(5);
+        jScrollPane9.setViewportView(TxtArea5);
+
+        getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 360, -1));
+
+        TxtArea10.setColumns(20);
+        TxtArea10.setRows(5);
+        jScrollPane10.setViewportView(TxtArea10);
+
+        getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 340, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -50,8 +152,27 @@ public class StudyPoints extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackActionPerformed
 
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea TxtArea1;
+    private javax.swing.JTextArea TxtArea10;
+    private javax.swing.JTextArea TxtArea2;
+    private javax.swing.JTextArea TxtArea3;
+    private javax.swing.JTextArea TxtArea4;
+    private javax.swing.JTextArea TxtArea5;
+    private javax.swing.JTextArea TxtArea6;
+    private javax.swing.JTextArea TxtArea7;
+    private javax.swing.JTextArea TxtArea8;
+    private javax.swing.JTextArea TxtArea9;
     private javax.swing.JButton btnBack;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     // End of variables declaration//GEN-END:variables
 }
