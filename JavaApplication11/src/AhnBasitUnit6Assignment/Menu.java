@@ -13,6 +13,7 @@ import java.awt.Color;
 public class Menu extends javax.swing.JFrame {
 
     private StudyPoints studyWindow;
+    private MCGUI MCWindow;
 
     /**
      * Creates new form Unit6Assignment
@@ -39,7 +40,6 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(java.awt.Color.white);
-        setPreferredSize(new java.awt.Dimension(575, 435));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 2, 18)); // NOI18N
@@ -80,6 +80,13 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnMCQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMCQuizActionPerformed
         // TODO add your handling code here:
+        if (MCWindow == null) {
+            MCWindow = new MCGUI(this);
+
+        }
+
+        MCWindow.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnMCQuizActionPerformed
 
     /**
