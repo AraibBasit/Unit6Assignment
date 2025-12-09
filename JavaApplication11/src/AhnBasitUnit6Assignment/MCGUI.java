@@ -14,7 +14,7 @@ import java.awt.Color;
  * @author JaAhn8882
  */
 public class MCGUI extends javax.swing.JFrame {
-    
+
     Menu mainWindow;
     int[] ans = new int[10];
 
@@ -47,9 +47,6 @@ public class MCGUI extends javax.swing.JFrame {
                 }
             }
             txtQuestions.setText(quiz);
-            for (int i = 0; i < 10; i++) {
-                System.out.println(ans[i]);
-            }
         } catch (FileNotFoundException e) {
             System.out.println("Error: " + e);
         }
@@ -237,7 +234,7 @@ public class MCGUI extends javax.swing.JFrame {
             correct++;
         } else {
             feedback += "- Cost of each stages\n";
-            
+
         }
         //answer checking for question 7
         if (cbx7.getSelectedIndex() == ans[6]) {
