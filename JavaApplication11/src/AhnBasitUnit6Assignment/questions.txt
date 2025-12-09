@@ -1,0 +1,60 @@
+1. What does a system not involve?
+a. Client
+b. Analysts
+c. Designer
+d. Driver
+3
+2. Choose one that does not measure success?
+a. Scaleability
+b. Maintainability
+c. Delivered on time
+d. Luxurious
+3
+3. What does SDLC stand for?
+a. Software Development Life Cycle
+b. System Data Logging Code
+c. Software Design Logic Chart
+d. Software Development Learning Cycle
+0
+4. What phase does the Waterfall model not include?
+a. Problem Statement
+b. Client Service
+c. Analysis
+d. Maintenance
+1
+5. Out of these 4 situation, when is it the best stage to find a mistake?
+a. When provided to user
+b. Testing Stage
+c. Designing Stage
+d. Implementing Stage
+2
+6. At which stage does the cost of developing software the most?
+a. Implementation
+b. Design
+c. Maintenance
+d. Testing
+2
+7. What is not a tool for project management?
+a. Gantt Chart
+b. UML
+c. Microsoft Teams
+d. Netflix
+3
+8. When was the Gantt Chart developed?
+a. 1910s
+b. 1920s
+c. 1930s
+d. 1900s
+0
+9. What does UML stand for?
+a. Universal Machine Logic
+b. User Management Layout
+c. Unified Modeling Language
+d. Universal Modeling Language
+2
+10. Who made the Waterfall model?
+a. Albert Einstein
+b. Winston Royce
+c. Issac Newton
+d. Oda Eiichiro
+1
