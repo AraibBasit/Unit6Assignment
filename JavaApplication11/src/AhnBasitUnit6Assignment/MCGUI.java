@@ -194,46 +194,66 @@ public class MCGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         mainWindow.setVisible(true);
         this.setVisible(false);
+        txtFeedback.setText("");
+        //initializing the window by setting every combo box to 1st index and enabling the submit button
+        btnSubmit.setEnabled(true);
+        cbx1.setSelectedIndex(0);
+        cbx2.setSelectedIndex(0);
+        cbx3.setSelectedIndex(0);
+        cbx4.setSelectedIndex(0);
+        cbx5.setSelectedIndex(0);
+        cbx6.setSelectedIndex(0);
+        cbx7.setSelectedIndex(0);
+        cbx8.setSelectedIndex(0);
+        cbx9.setSelectedIndex(0);
+        cbx10.setSelectedIndex(0);
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         int correct = 0;
         String feedback = "Review more towards:\n";
+        String correctAns = "Questions you got wrong and answers to each:\n";
         //answer checking for question 1
         if (cbx1.getSelectedIndex() == ans[0]) {
             correct++;
         } else {
             feedback += "- System concept\n";
+            correctAns += "Q1: " + cbx1.getItemAt(ans[0]) + "\n";
         }
         //answer checking for question 2
         if (cbx2.getSelectedIndex() == ans[1]) {
             correct++;
         } else {
             feedback += "- Success criteria\n";
+            correctAns += "Q2: " + cbx2.getItemAt(ans[1]) + "\n";
         }
         //answer checking for question 3
         if (cbx3.getSelectedIndex() == ans[2]) {
             correct++;
         } else {
             feedback += "- Software Development Life Cycle\n";
+            correctAns += "Q3: " + cbx3.getItemAt(ans[2]) + "\n";
         }
         //answer checking for question 4
         if (cbx4.getSelectedIndex() == ans[3]) {
             correct++;
         } else {
             feedback += "- Waterfall model phases\n";
+            correctAns += "Q4: " + cbx4.getItemAt(ans[3]) + "\n";
         }
         //answer checking for question 5
         if (cbx5.getSelectedIndex() == ans[4]) {
             correct++;
         } else {
             feedback += "- Stage flow and error correction\n";
+            correctAns += "Q5: " + cbx5.getItemAt(ans[4]) + "\n";
         }
         //answer checking for question 6
         if (cbx6.getSelectedIndex() == ans[5]) {
             correct++;
         } else {
             feedback += "- Cost of each stages\n";
+            correctAns += "Q6: " + cbx6.getItemAt(ans[5]) + "\n";
 
         }
         //answer checking for question 7
@@ -241,29 +261,34 @@ public class MCGUI extends javax.swing.JFrame {
             correct++;
         } else {
             feedback += "- Tools to assist project management\n";
+            correctAns += "Q7: " + cbx7.getItemAt(ans[6]) + "\n";
         }
         //answer checking for question 8
         if (cbx8.getSelectedIndex() == ans[7]) {
             correct++;
         } else {
             feedback += "- Gantt Chart\n";
+            correctAns += "Q8: " + cbx8.getItemAt(ans[7]) + "\n";
         }
         //answer checking for question 9
         if (cbx9.getSelectedIndex() == ans[8]) {
             correct++;
         } else {
             feedback += "- UML\n";
+            correctAns += "Q9: " + cbx9.getItemAt(ans[8]) + "\n";
         }
         //answer checking for question 10
         if (cbx10.getSelectedIndex() == ans[9]) {
             correct++;
         } else {
             feedback += "- Waterfall model\n";
+            correctAns += "Q10: " + cbx10.getItemAt(ans[9]) + "\n";
         }
         if (correct == 10) {
             feedback = "Great Job, you have aced the quiz. You have mastered SDLC in computer science!";
+            correctAns = "";
         }
-        txtFeedback.setText("Your Score: " + correct + "/10\nFeedback: " + feedback);
+        txtFeedback.setText("Your Score: " + correct + "/10\n" + correctAns + "Feedback: " + feedback);
         btnSubmit.setEnabled(false);
     }//GEN-LAST:event_btnSubmitActionPerformed
 
