@@ -36,6 +36,8 @@ public class Menu extends javax.swing.JFrame {
         btnStudyPoints = new javax.swing.JButton();
         btnMCQuiz = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -63,7 +65,16 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(btnMCQuiz, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 240, 70));
 
         btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 240, 70));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, -1, -1));
+
+        jLabel3.setText(".");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 40, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -71,23 +82,22 @@ public class Menu extends javax.swing.JFrame {
     private void btnStudyPointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudyPointsActionPerformed
         if (studyWindow == null) {
             studyWindow = new StudyPoints(this);
-
         }
-
         studyWindow.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnStudyPointsActionPerformed
 
     private void btnMCQuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMCQuizActionPerformed
-        // TODO add your handling code here:
         if (MCWindow == null) {
             MCWindow = new MCGUI(this);
-
         }
-
         MCWindow.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnMCQuizActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        System.exit(0);//closing program
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,5 +140,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnMCQuiz;
     private javax.swing.JButton btnStudyPoints;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

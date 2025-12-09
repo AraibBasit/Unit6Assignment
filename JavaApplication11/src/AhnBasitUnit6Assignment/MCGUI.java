@@ -4,13 +4,19 @@
  */
 package AhnBasitUnit6Assignment;
 
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.awt.Color;
+
 /**
  *
  * @author JaAhn8882
  */
 public class MCGUI extends javax.swing.JFrame {
-
+    
     Menu mainWindow;
+    int[] ans = new int[10];
 
     /**
      * Creates new form MCGUI
@@ -18,6 +24,35 @@ public class MCGUI extends javax.swing.JFrame {
     public MCGUI(Menu m) {
         initComponents();
         mainWindow = m;
+        getContentPane().setBackground(Color.CYAN);
+        try {
+            File f = new File("src/ahnbasitunit6assignment/questions.txt");
+            Scanner s = new Scanner(f);
+            String[] questions = new String[50];
+            int ansIndex = 0, questionIndex = 0;
+            for (int i = 0; i < 60; i++) {
+                if ((i + 1) % 6 != 0) {
+                    questions[questionIndex] = s.nextLine();
+                    questionIndex++;
+                } else {
+                    ans[ansIndex] = Integer.parseInt(s.nextLine());
+                    ansIndex++;
+                }
+            }
+            String quiz = "";
+            for (int j = 0; j < questions.length; j++) {
+                quiz += questions[j] + "\n";
+                if ((j + 1) % 5 == 0) {
+                    quiz += "\n";
+                }
+            }
+            txtQuestions.setText(quiz);
+            for (int i = 0; i < 10; i++) {
+                System.out.println(ans[i]);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: " + e);
+        }
     }
 
     /**
@@ -30,6 +65,32 @@ public class MCGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         btnBack = new javax.swing.JButton();
+        cbx1 = new javax.swing.JComboBox<>();
+        cbx2 = new javax.swing.JComboBox<>();
+        cbx7 = new javax.swing.JComboBox<>();
+        cbx3 = new javax.swing.JComboBox<>();
+        cbx6 = new javax.swing.JComboBox<>();
+        cbx9 = new javax.swing.JComboBox<>();
+        cbx5 = new javax.swing.JComboBox<>();
+        cbx8 = new javax.swing.JComboBox<>();
+        cbx4 = new javax.swing.JComboBox<>();
+        cbx10 = new javax.swing.JComboBox<>();
+        btnSubmit = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtQuestions = new javax.swing.JTextArea();
+        lbl5 = new javax.swing.JLabel();
+        lbl3 = new javax.swing.JLabel();
+        lbl1 = new javax.swing.JLabel();
+        lbl2 = new javax.swing.JLabel();
+        lbl6 = new javax.swing.JLabel();
+        lbl4 = new javax.swing.JLabel();
+        lbl8 = new javax.swing.JLabel();
+        lbl9 = new javax.swing.JLabel();
+        lbl10 = new javax.swing.JLabel();
+        lbl7 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtFeedback = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -40,7 +101,93 @@ public class MCGUI extends javax.swing.JFrame {
                 btnBackActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, -1, -1));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, -1, -1));
+
+        cbx1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, -1, -1));
+
+        cbx2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
+
+        cbx7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx7, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, -1, -1));
+
+        cbx3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, -1, -1));
+
+        cbx6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, -1, -1));
+
+        cbx9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx9, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 210, -1, -1));
+
+        cbx5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, -1, -1));
+
+        cbx8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx8, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 160, -1, -1));
+
+        cbx4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, -1, -1));
+
+        cbx10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "a", "b", "c", "d" }));
+        getContentPane().add(cbx10, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, -1, -1));
+
+        btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 240, 50));
+
+        lblTitle.setFont(new java.awt.Font("맑은 고딕", 1, 18)); // NOI18N
+        lblTitle.setText("Multiple Choise Quiz");
+        getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 190, 30));
+
+        txtQuestions.setEditable(false);
+        txtQuestions.setColumns(20);
+        txtQuestions.setRows(5);
+        jScrollPane1.setViewportView(txtQuestions);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 410, 200));
+
+        lbl5.setText("5");
+        getContentPane().add(lbl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, -1, -1));
+
+        lbl3.setText("3");
+        getContentPane().add(lbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+
+        lbl1.setText("1");
+        getContentPane().add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 60, -1, -1));
+
+        lbl2.setText("2");
+        getContentPane().add(lbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, -1, -1));
+
+        lbl6.setText("6");
+        getContentPane().add(lbl6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 60, -1, -1));
+
+        lbl4.setText("4");
+        getContentPane().add(lbl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
+
+        lbl8.setText("8");
+        getContentPane().add(lbl8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, -1, -1));
+
+        lbl9.setText("9");
+        getContentPane().add(lbl9, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, -1, -1));
+
+        lbl10.setText("10");
+        getContentPane().add(lbl10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 260, 20, -1));
+
+        lbl7.setText("7");
+        getContentPane().add(lbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, -1, -1));
+
+        txtFeedback.setEditable(false);
+        txtFeedback.setColumns(20);
+        txtFeedback.setRows(5);
+        jScrollPane2.setViewportView(txtFeedback);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 410, 200));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -52,11 +199,108 @@ public class MCGUI extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        int correct = 0;
+        String feedback = "Review more towards:\n";
+        //answer checking for question 1
+        if (cbx1.getSelectedIndex() == ans[0]) {
+            correct++;
+        } else {
+            feedback += "- System concept\n";
+        }
+        //answer checking for question 2
+        if (cbx2.getSelectedIndex() == ans[1]) {
+            correct++;
+        } else {
+            feedback += "- Success criteria\n";
+        }
+        //answer checking for question 3
+        if (cbx3.getSelectedIndex() == ans[2]) {
+            correct++;
+        } else {
+            feedback += "- Software Development Life Cycle\n";
+        }
+        //answer checking for question 4
+        if (cbx4.getSelectedIndex() == ans[3]) {
+            correct++;
+        } else {
+            feedback += "- Waterfall model phases\n";
+        }
+        //answer checking for question 5
+        if (cbx5.getSelectedIndex() == ans[4]) {
+            correct++;
+        } else {
+            feedback += "- Stage flow and error correction\n";
+        }
+        //answer checking for question 6
+        if (cbx6.getSelectedIndex() == ans[5]) {
+            correct++;
+        } else {
+            feedback += "- Cost of each stages\n";
+            
+        }
+        //answer checking for question 7
+        if (cbx7.getSelectedIndex() == ans[6]) {
+            correct++;
+        } else {
+            feedback += "- Tools to assist project management\n";
+        }
+        //answer checking for question 8
+        if (cbx8.getSelectedIndex() == ans[7]) {
+            correct++;
+        } else {
+            feedback += "- Gantt Chart\n";
+        }
+        //answer checking for question 9
+        if (cbx9.getSelectedIndex() == ans[8]) {
+            correct++;
+        } else {
+            feedback += "- UML\n";
+        }
+        //answer checking for question 10
+        if (cbx10.getSelectedIndex() == ans[9]) {
+            correct++;
+        } else {
+            feedback += "- Waterfall model\n";
+        }
+        if (correct == 10) {
+            feedback = "Great Job, you have aced the quiz. You have mastered SDLC in computer science!";
+        }
+        txtFeedback.setText("Your Score: " + correct + "/10\nFeedback: " + feedback);
+        btnSubmit.setEnabled(false);
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnSubmit;
+    private javax.swing.JComboBox<String> cbx1;
+    private javax.swing.JComboBox<String> cbx10;
+    private javax.swing.JComboBox<String> cbx2;
+    private javax.swing.JComboBox<String> cbx3;
+    private javax.swing.JComboBox<String> cbx4;
+    private javax.swing.JComboBox<String> cbx5;
+    private javax.swing.JComboBox<String> cbx6;
+    private javax.swing.JComboBox<String> cbx7;
+    private javax.swing.JComboBox<String> cbx8;
+    private javax.swing.JComboBox<String> cbx9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lbl10;
+    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lbl4;
+    private javax.swing.JLabel lbl5;
+    private javax.swing.JLabel lbl6;
+    private javax.swing.JLabel lbl7;
+    private javax.swing.JLabel lbl8;
+    private javax.swing.JLabel lbl9;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JTextArea txtFeedback;
+    private javax.swing.JTextArea txtQuestions;
     // End of variables declaration//GEN-END:variables
 }

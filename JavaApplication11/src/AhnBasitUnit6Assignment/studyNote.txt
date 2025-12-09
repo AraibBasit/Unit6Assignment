@@ -1,5 +1,5 @@
-A system is a combination of software and sometimes hardware the provides a solution for a problem. 
-It involves: the client, Analysts, Designers, developers, testers, users, and other people (lawyers, communications officers, and other specialists)
+A system is a combination of software and sometimes hardware that provides a solution for a problem. 
+It involves: the client, analysts, designers, developers, testers, users, and other people (lawyers, communications officers, and other specialists)
 Success can be measured by answering the following questions: 
 Does the project solve what it was meant to solve?
 Is it easy to maintain and administer?
@@ -15,7 +15,7 @@ The Waterfall Model consists of several phases: Problem Statement, Analysis, Des
 Mistakes found early in the SDLC are much less expensive to correct than those found later
 The cost of developing software is not spread equally over the phases. 
 It is mostly spent on maintenance
-Some tools for project Management are: Gantt charts, UML, Daily Logs, Weekly Reports, and Communication using Microsoft Teams, Slack or Google Spaces
+Some tools for project management are: Gantt charts, UML, Daily Logs, Weekly Reports, and Communication using Microsoft Teams, Slack or Google Spaces
 Gantt Chart was developed by mechanical engineer Henry Gantt in the 1910’s. 
 It is a tool typically used by people working on a large project (Hoover Dam, Eisenhower National Defense Interstate Highway System). 
 It helps project managers to visualize, schedule, and track scheduled as well as actual progress of projects
