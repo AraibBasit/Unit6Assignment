@@ -4,6 +4,7 @@
  */
 package AhnBasitUnit6Assignment;
 
+import java.awt.Color;
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
@@ -21,6 +22,7 @@ public class StudyPoints extends javax.swing.JFrame {
      */
     public StudyPoints(Menu m) {
         initComponents();
+        getContentPane().setBackground(Color.CYAN);
         mainWindow = m;
         try {
             File f = new File("src/AhnBasitUnit6Assignment/studyNote.txt");
@@ -82,65 +84,75 @@ public class StudyPoints extends javax.swing.JFrame {
         });
         getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 510, -1, -1));
 
+        TxtArea1.setEditable(false);
         TxtArea1.setColumns(20);
         TxtArea1.setRows(5);
         jScrollPane1.setViewportView(TxtArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 80));
 
+        TxtArea2.setEditable(false);
         TxtArea2.setColumns(20);
         TxtArea2.setRows(5);
         jScrollPane2.setViewportView(TxtArea2);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 360, 80));
 
+        TxtArea3.setEditable(false);
         TxtArea3.setColumns(20);
         TxtArea3.setRows(5);
         jScrollPane3.setViewportView(TxtArea3);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 360, -1));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 360, 80));
 
+        TxtArea4.setEditable(false);
         TxtArea4.setColumns(20);
         TxtArea4.setRows(5);
         jScrollPane4.setViewportView(TxtArea4);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 360, -1));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 360, 80));
 
+        TxtArea6.setEditable(false);
         TxtArea6.setColumns(20);
         TxtArea6.setRows(5);
         jScrollPane5.setViewportView(TxtArea6);
 
-        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 340, -1));
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 340, 80));
 
+        TxtArea7.setEditable(false);
         TxtArea7.setColumns(20);
         TxtArea7.setRows(5);
         jScrollPane6.setViewportView(TxtArea7);
 
-        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 340, -1));
+        getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 340, 80));
 
+        TxtArea8.setEditable(false);
         TxtArea8.setColumns(20);
         TxtArea8.setRows(5);
         jScrollPane7.setViewportView(TxtArea8);
 
-        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 340, -1));
+        getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 340, 80));
 
+        TxtArea9.setEditable(false);
         TxtArea9.setColumns(20);
         TxtArea9.setRows(5);
         jScrollPane8.setViewportView(TxtArea9);
 
-        getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 340, -1));
+        getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 340, 80));
 
+        TxtArea5.setEditable(false);
         TxtArea5.setColumns(20);
         TxtArea5.setRows(5);
         jScrollPane9.setViewportView(TxtArea5);
 
-        getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 360, -1));
+        getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 451, 360, 80));
 
+        TxtArea10.setEditable(false);
         TxtArea10.setColumns(20);
         TxtArea10.setRows(5);
         jScrollPane10.setViewportView(TxtArea10);
 
-        getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 340, -1));
+        getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 451, 340, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
